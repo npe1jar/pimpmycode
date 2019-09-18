@@ -1,0 +1,63 @@
+def build_sentence(xyz):
+    return "%s is a benefit of functions!" % xyz
+
+def list_benefits():
+    list_not_an_array = "1 blind","2 blinds ","3 blinds"
+    for x in list_not_an_array:
+        print(build_sentence(x))
+
+user_input = input("enter the user benefit ")
+build_sentence(user_input)
+#list_benefits()
+
+PRODUCES THIS
+enter the user benefit qqq
+'qqq is a benefit of functions!'
+
+and 
+
+def build_sentence(xyz):
+    return "%s is a benefit of functions!" % xyz
+
+def list_benefits():
+    list_not_an_array = "1 blind","2 blinds ","3 blinds"
+    for x in list_not_an_array:
+        print(build_sentence(x))
+
+#user_input = input("enter the user benefit ")
+#build_sentence(user_input)
+list_benefits()
+
+PRODUCES THIS
+1 blind is a benefit of functions!
+2 blinds  is a benefit of functions!
+3 blinds is a benefit of functions!
+
+SO WHY DOES THIS
+def build_sentence(xyz):
+    return "%s is a benefit of functions!" % xyz
+
+def list_benefits():
+    list_not_an_array = "1 blind","2 blinds ","3 blinds"
+    for x in list_not_an_array:
+        print(build_sentence(x))
+
+user_input = input("enter the user benefit ")
+build_sentence(user_input)
+list_benefits()
+
+PRODUCE THIS
+enter the user benefit qqq
+1 blind is a benefit of functions!
+2 blinds  is a benefit of functions!
+3 blinds is a benefit of functions!
+
+AND NOT THIS
+enter the user benefit qqq
+qqq is a benefit...
+1 blind is a benefit of functions!
+2 blinds  is a benefit of functions!
+
+
+ANSWER TO MYSELF: IS THE FIRST LINE ALWAYS OVERWRITTEN??
+3 blinds is a benefit of functions!
